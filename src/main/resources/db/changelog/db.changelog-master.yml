@@ -1,0 +1,3 @@
+databaseChangeLog:                    # Início do changelog principal do Liquibase
+  - includeAll:                       # Instrução para incluir automaticamente todos os arquivos de migrations
+      path: db/changelog/migrations  # Caminho da pasta onde estão os arquivos de migração (ex: changesets em SQL ou YAML)

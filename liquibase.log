@@ -1,0 +1,62 @@
+mai. 24, 2025 8:05:09 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-001.sql
+mai. 24, 2025 8:05:09 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-002.sql
+mai. 24, 2025 8:05:09 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-003.sql
+mai. 24, 2025 8:05:09 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-004.sql
+mai. 24, 2025 8:05:09 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-005.sql
+mai. 24, 2025 8:05:09 PM liquibase.changelog
+INFO: Reading from board.databasechangelog
+mai. 24, 2025 8:05:09 PM liquibase.changelog
+INFO: Change failed validation!
+mai. 24, 2025 8:05:09 PM liquibase.command
+INFO: Logging exception.
+ERROR: Exception Details
+ERROR: Exception Primary Class:  ValidationFailedException
+ERROR: Exception Primary Reason:  Validation Failed:
+     5 changesets check sum
+          db/changelog/migrations/db.changelog-001.sql::001::jhonata was: 9:600faeeab3ba0fa303d621bbe28e5e0b but is now: 9:137d89c7a722483c419b9bf63714a6ef
+          db/changelog/migrations/db.changelog-002.sql::002::jhonata was: 9:cfebdfa38810bf1f128db8ff6ccf5654 but is now: 9:2d578f8abde85518c52f380d7c49e23a
+          db/changelog/migrations/db.changelog-003.sql::003::jhonata was: 9:0427d24dfcd55a443cd878e0d9d9366d but is now: 9:9cb5d5f3e4792d6b126bd15d79dfed73
+          db/changelog/migrations/db.changelog-004.sql::004::jhonata was: 9:e6bd6259453164eeb75c596d139758b8 but is now: 9:ca17eb23b7d16103c3c6d9475bf3081f
+          db/changelog/migrations/db.changelog-005.sql::005::jhonata was: 9:31d9b287f43e068cca44cb25cbae6558 but is now: 9:b582fae839dca551e2c888310c84922b
+
+ERROR: Exception Primary Source:  4.29.1
+mai. 24, 2025 8:05:09 PM liquibase.command
+INFO: Command execution complete
+liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     5 changesets check sum
+          db/changelog/migrations/db.changelog-001.sql::001::jhonata was: 9:600faeeab3ba0fa303d621bbe28e5e0b but is now: 9:137d89c7a722483c419b9bf63714a6ef
+          db/changelog/migrations/db.changelog-002.sql::002::jhonata was: 9:cfebdfa38810bf1f128db8ff6ccf5654 but is now: 9:2d578f8abde85518c52f380d7c49e23a
+          db/changelog/migrations/db.changelog-003.sql::003::jhonata was: 9:0427d24dfcd55a443cd878e0d9d9366d but is now: 9:9cb5d5f3e4792d6b126bd15d79dfed73
+          db/changelog/migrations/db.changelog-004.sql::004::jhonata was: 9:e6bd6259453164eeb75c596d139758b8 but is now: 9:ca17eb23b7d16103c3c6d9475bf3081f
+          db/changelog/migrations/db.changelog-005.sql::005::jhonata was: 9:31d9b287f43e068cca44cb25cbae6558 but is now: 9:b582fae839dca551e2c888310c84922b
+
+	at liquibase.command.CommandScope.execute(CommandScope.java:258)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1290)
+	at liquibase.Liquibase.update(Liquibase.java:205)
+	at liquibase.Liquibase.update(Liquibase.java:188)
+	at liquibase.Liquibase.update(Liquibase.java:175)
+	at liquibase.Liquibase.update(Liquibase.java:155)
+	at org.example.persistence.migration.MigrationStrategy.executeMigration(MigrationStrategy.java:44)
+	at org.example.Main.main(Main.java:13)
+Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
+     5 changesets check sum
+          db/changelog/migrations/db.changelog-001.sql::001::jhonata was: 9:600faeeab3ba0fa303d621bbe28e5e0b but is now: 9:137d89c7a722483c419b9bf63714a6ef
+          db/changelog/migrations/db.changelog-002.sql::002::jhonata was: 9:cfebdfa38810bf1f128db8ff6ccf5654 but is now: 9:2d578f8abde85518c52f380d7c49e23a
+          db/changelog/migrations/db.changelog-003.sql::003::jhonata was: 9:0427d24dfcd55a443cd878e0d9d9366d but is now: 9:9cb5d5f3e4792d6b126bd15d79dfed73
+          db/changelog/migrations/db.changelog-004.sql::004::jhonata was: 9:e6bd6259453164eeb75c596d139758b8 but is now: 9:ca17eb23b7d16103c3c6d9475bf3081f
+          db/changelog/migrations/db.changelog-005.sql::005::jhonata was: 9:31d9b287f43e068cca44cb25cbae6558 but is now: 9:b582fae839dca551e2c888310c84922b
+
+	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:393)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:92)
+	at liquibase.command.CommandScope.execute(CommandScope.java:220)
+	... 12 more
