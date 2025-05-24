@@ -1,6 +1,8 @@
 # 🗂️ Gerenciador de Boards
 
-Um sistema de gerenciamento de boards estilo Kanban, criado em **Java**, com suporte a criação de colunas personalizadas, persistência em banco de dados e interface de linha de comando.
+Este projeto é um gerenciador de boards desenvolvido em **Java** para execução via terminal. Permite criar boards personalizados com múltiplas colunas, além de gerenciar cards por meio de operações como criação, movimentação entre colunas, bloqueio, desbloqueio e cancelamento.
+
+O sistema utiliza banco de dados relacional para persistência das informações, oferecendo uma aplicação simples, prática e eficiente para organização e acompanhamento de tarefas. Ideal para quem deseja aprender conceitos de estrutura de dados, **JDBC** e design de sistemas modulares em **Java**.
 
 ## 🧠 Sobre o Projeto
 
